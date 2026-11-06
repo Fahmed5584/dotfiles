@@ -24,7 +24,8 @@ sudo pacman -S --needed --noconfirm \
   ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-common \
   vulkan-intel intel-media-driver \
   git github-cli fzf ripgrep fd \
-  qutebrowser keepassxc qt6-wayland syncthing fuzzel mako glow
+  qutebrowser keepassxc qt6-wayland syncthing fuzzel mako glow \
+  bluez bluez-utils blueman
 
 git config --global user.email "f4154l.4hm3d@gmail.com"
 git config --global user.name "Faisal Ahmed"
@@ -37,7 +38,7 @@ sudo ufw allow from 192.168.50.0/24 to any port 22000 proto tcp
 sudo ufw allow from 192.168.50.0/24 to any port 22000 proto udp
 sudo ufw allow from 192.168.50.0/24 to any port 21027 proto udp
 sudo ufw --force enable
-sudo systemctl enable --now ufw
+sudo systemctl enable --now ufw bluetooth.service
 
 # 5. Dotfiles (Hyprland and Neovim configs)
 if [[ -d ~/00_repos/dotfiles ]]; then
