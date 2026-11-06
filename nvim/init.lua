@@ -37,3 +37,7 @@ vim.api.nvim_create_autocmd("FileType", {
 --set "jj" to ESC when in insert mode 
 vim.keymap.set("i", "jj", "<Esc>")
 
+--Remove any Background:
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+
