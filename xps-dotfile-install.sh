@@ -39,3 +39,7 @@ echo "Copied keepassxc/keepassxc.ini to ~/.config/keepassxc/"
 mkdir -p "$HOME/.config/qutebrowser"
 cp -r "$repo_dir/qutebrowser/." "$HOME/.config/qutebrowser/"
 echo "Copied qutebrowser/ to ~/.config/qutebrowser/"
+
+# 8. Copy status script
+cp "$repo_dir/status.sh" "$HOME/status.sh"
+echo "Copied status.sh to ~/status.sh"
