@@ -24,7 +24,7 @@ sudo pacman -S --needed --noconfirm \
   ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-common \
   vulkan-intel intel-media-driver \
   git github-cli fzf ripgrep fd \
-  qutebrowser keepassxc qt6-wayland syncthing
+  qutebrowser keepassxc qt6-wayland syncthing fuzzel mako
 
 # 4. Firewall: deny incoming except SSH and Syncthing from the home network
 sudo ufw default deny incoming
@@ -42,7 +42,7 @@ if [[ -d ~/dotfiles ]]; then
 else
   git clone https://github.com/Fahmed5584/dotfiles ~/dotfiles
 fi
-bash ~/dotfiles/install.sh
+bash ~/dotfiles/xps-dotfile-install.sh
 
 # 6. Syncthing, started at every login
 systemctl --user enable --now syncthing.service
