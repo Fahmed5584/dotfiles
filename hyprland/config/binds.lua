@@ -8,6 +8,7 @@ hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(vars.terminal))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(vars.texteditor))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(vars.browser))
 hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd("fuzzel"))
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("bash ~/status.sh"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle"}))
 
 -- ==============================================
