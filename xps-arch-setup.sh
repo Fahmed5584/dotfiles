@@ -26,6 +26,9 @@ sudo pacman -S --needed --noconfirm \
   git github-cli fzf ripgrep fd \
   qutebrowser keepassxc qt6-wayland syncthing fuzzel mako glow
 
+git config --global user.email "f4154l.4hm3d@gmail.com"
+git config --global user.name "Faisal Ahmed"
+
 # 4. Firewall: deny incoming except SSH and Syncthing from the home network
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
