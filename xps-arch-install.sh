@@ -68,7 +68,7 @@ mount "$root_part" /mnt
 mount --mkdir "$boot_part" /mnt/boot
 
 # 4. Base system
-pacstrap -K /mnt base linux-firmware sof-firmware intel-ucode sudo neovim iwd
+pacstrap -K /mnt base linux-firmware intel-ucode sudo neovim iwd
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # 5. Wi-Fi: reuse the network you joined on the live USB, and the systemd-networkd config
