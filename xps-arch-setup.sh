@@ -24,7 +24,7 @@ sudo pacman -S --needed --noconfirm \
   ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-common \
   vulkan-intel intel-media-driver \
   git github-cli fzf ripgrep fd \
-  qutebrowser keepassxc qt6-wayland syncthing fuzzel mako
+  qutebrowser keepassxc qt6-wayland syncthing fuzzel mako glow
 
 # 4. Firewall: deny incoming except SSH and Syncthing from the home network
 sudo ufw default deny incoming
