@@ -1,0 +1,7 @@
+require("./config/monitor")
+require("./config/binds")
+require("./config/windowrules")
+require("./config/environment")
+require("./config/config")
+require("./config/animation")
+local vars = require("./config/variables")
