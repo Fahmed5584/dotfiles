@@ -44,8 +44,8 @@ else
 fi
 bash ~/dotfiles/xps-dotfile-install.sh
 
-# 6. Syncthing, started at every login
-systemctl --user enable --now syncthing.service
+# 6. Configure Startup Services
+systemctl --user enable --now syncthing.service pipewire.socket pipewire-pulse.socket wireplumber.service
 
 # 7. SSH, keys only. Safe to start now: with passwords off and no key added, nobody can log in yet
 install -d -m 700 ~/.ssh
