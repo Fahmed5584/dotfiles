@@ -40,12 +40,13 @@ sudo ufw --force enable
 sudo systemctl enable --now ufw
 
 # 5. Dotfiles (Hyprland and Neovim configs)
-if [[ -d ~/dotfiles ]]; then
-  git -C ~/dotfiles pull
+if [[ -d ~/00_repos/dotfiles ]]; then
+  git -C ~/00_repos/dotfiles pull
 else
-  git clone https://github.com/Fahmed5584/dotfiles ~/dotfiles
+  mkdir 00_repos
+  git clone https://github.com/Fahmed5584/dotfiles ~/00_repos/dotfiles
 fi
-bash ~/dotfiles/xps-dotfile-install.sh
+bash ~/00_repos/dotfiles/xps-dotfile-install.sh
 
 # 6. Configure Startup Services
 systemctl --user enable --now syncthing.service pipewire.socket pipewire-pulse.socket wireplumber.service
