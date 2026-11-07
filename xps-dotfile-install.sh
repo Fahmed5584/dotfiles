@@ -43,7 +43,7 @@ echo "Copied qutebrowser/ to ~/.config/qutebrowser/"
 # 8. Kitty
 mkdir -p "$HOME/.config/kitty"
 cp "$repo_dir/kitty/kitty.conf" "$HOME/.config/kitty/"
-echo "Copied kitty/kitty.conf" to ~/.config/kitty/"
+echo "Copied kitty/kitty.conf to ~/.config/kitty/"
 
 # 9. Waybar
 mkdir -p "$HOME/.config/waybar"
