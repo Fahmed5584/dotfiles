@@ -40,6 +40,16 @@ mkdir -p "$HOME/.config/qutebrowser"
 cp -r "$repo_dir/qutebrowser/." "$HOME/.config/qutebrowser/"
 echo "Copied qutebrowser/ to ~/.config/qutebrowser/"
 
-# 8. Copy status script
+# 8. Kitty
+mkdir -p "$HOME/.config/kitty"
+cp "$repo_dir/kitty/kitty.conf" "$HOME/.config/kitty/"
+echo "Copied kitty/kitty.conf" to ~/.config/kitty/"
+
+# 9. Waybar
+mkdir -p "$HOME/.config/waybar"
+cp -r "$repo_dir/waybar/." "$HOME/.config/waybar/"
+echo "Copied waybar/ to ~/.config/waybar/"
+
+# 10. Copy status script
 cp "$repo_dir/status.sh" "$HOME/status.sh"
 echo "Copied status.sh to ~/status.sh"
