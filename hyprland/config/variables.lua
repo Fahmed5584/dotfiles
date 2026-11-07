@@ -3,5 +3,5 @@ M.mainMod = "SUPER"
 
 M.terminal    = "kitty"
 M.texteditor  = "kitty -e nvim"
-M.browser     = "kitty -e qutebrowser"
+M.browser     = "qutebrowser"
 return M
