@@ -1,7 +1,7 @@
 hl.config({
     general = {
-        gaps_in  = 4,
-        gaps_out = 6,
+        gaps_in  = 15,
+        gaps_out = 50,
         border_size = 1,
 
         col = {
@@ -50,8 +50,6 @@ hl.config({
     },
 
     misc = {
-    	force_default_wallpaper = 2,
-	disable_hyprland_logo 	= false,
     },
 
     layers = {

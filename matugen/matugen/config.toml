@@ -1,0 +1,17 @@
+[config]
+
+[config.wallpaper]
+set = true
+
+command = "swaybg -i {{ image }} -m center "	
+
+[templates.waybar]
+input_path = '~/.config/matugen/colors.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = "pkill -SIGUSR2 waybar"
+
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors.conf'
+post_hook = "pkill -USR1 kitty || true"
