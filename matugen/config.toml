@@ -3,7 +3,7 @@
 [config.wallpaper]
 set = true
 
-command = "swaybg -i {{ image }} -m center "	
+command = "swaybg -i {{ image }} -m fill "	
 
 [templates.waybar]
 input_path = '~/.config/matugen/colors.css'
