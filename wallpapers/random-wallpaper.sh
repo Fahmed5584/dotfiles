@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Set your wallpaper folder path
-WALLPAPER_DIR="$HOME/wallpapers"
+WALLPAPER_DIR="$HOME/00_repos/dotfiles/wallpapers"
 
 # Pick one random image file from the directory
 RANDOM_WALLPAPER=$(find "$WALLPAPER_DIR" -maxdepth 1 -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.webp" \) | shuf -n 1)

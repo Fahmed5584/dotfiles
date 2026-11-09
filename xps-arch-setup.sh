@@ -26,7 +26,7 @@ sudo pacman -S --needed --noconfirm \
   git github-cli fzf ripgrep fd \
   qutebrowser keepassxc qt6-wayland syncthing fuzzel mako glow \
   bluez bluez-utils blueman waybar otf-font-awesome ttf-jetbrains-mono-nerd
-
+  matugen swaybg
 git config --global user.email "f4154l.4hm3d@gmail.com"
 git config --global user.name "Faisal Ahmed"
 

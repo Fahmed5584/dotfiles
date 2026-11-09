@@ -1,58 +1,59 @@
+@import "colors.css";
+
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 11px;
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-bottom: 1px solid rgba(51, 204, 255, 0.5);
-    color: #ffffff;
-    transition-property: background-color;
-    transition-duration: .5s;
+    background-color: alpha(@surface_container_lowest, 0.92);
+    border-bottom: 1px solid @outline_variant;
+    color: @on_surface;
 }
 
 window#waybar.hidden {
     opacity: 0.2;
 }
 
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
-}
-
 button {
     box-shadow: inset 0 -1px transparent;
     border: none;
-    border-radius: 360;
+    border-radius: 999px;
 }
 
 button:hover {
-    background: inherit;
-    box-shadow: inset 0 -1px #ffffff;
+    background: alpha(@surface_container_high, 0.6);
+    box-shadow: inset 0 -1px @primary;
+}
+
+#workspaces {
+    margin: 3px 4px;
+    background-color: @surface_container_low;
+    border-radius: 999px;
+    border: 1px solid @outline_variant;
 }
 
 #workspaces button {
     padding: 0 8px;
     background-color: transparent;
-    color: #ffffff;
+    color: @on_surface_variant;
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background-color: alpha(@secondary, 0.18);
+    color: @secondary;
 }
 
-#workspaces button.focused, #workspaces button.active {
-    padding: 0 30px;
-    background-color: #64727D;
-    box-shadow: inset 0 -25px rgba(255,255,255,0.1);
-    color: #000000
+#workspaces button.focused,
+#workspaces button.active {
+    padding: 0 24px;
+    background-color: alpha(@primary, 0.22);
+    color: @primary;
+    border: 1px solid alpha(@primary, 0.45);
+    font-weight: bold;
 }
 
+/* Base pill shape */
 #clock,
 #battery,
 #cpu,
@@ -71,32 +72,73 @@ button:hover {
 #power-profiles-daemon,
 #mpd {
     padding: 0 10px;
-    color: #ffffff;
+    margin: 3px 2px;
+    background-color: @surface_container_low;
+    color: @on_surface_variant;
+    border-radius: 999px;
+    border: 1px solid @outline_variant;
 }
 
-#battery.charging, #battery.plugged {
-    color: #ffffff;
+/* Clock: Warm gold/amber tint */
+#clock {
+    background-color: alpha(@primary, 0.18);
+    color: @primary;
+    border: 1px solid alpha(@primary, 0.38);
+    font-weight: bold;
 }
 
-/* Using steps() instead of linear as a timing function to limit cpu usage */
-#battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+/* CPU: Soft sage/green or secondary hue */
+#cpu {
+    background-color: alpha(@secondary, 0.16);
+    color: @secondary;
+    border: 1px solid alpha(@secondary, 0.35);
+}
+
+/* RAM: Muted blue/tertiary hue */
+#memory {
+    background-color: alpha(@tertiary, 0.16);
+    color: @tertiary;
+    border: 1px solid alpha(@tertiary, 0.35);
+}
+
+/* Temperature: Warm terracotta/coral tint (uses soft pastel @error) */
+#temperature {
+    background-color: alpha(@error, 0.14);
+    color: @error;
+    border: 1px solid alpha(@error, 0.30);
+}
+
+/* Wi-Fi: Distinct secondary/tertiary blend */
+#network {
+    background-color: alpha(@tertiary, 0.22);
+    color: @tertiary;
+    border: 1px solid alpha(@tertiary, 0.42);
+}
+
+/* Battery: Soft primary/secondary tone */
+#battery {
+    background-color: alpha(@secondary, 0.20);
+    color: @secondary;
+    border: 1px solid alpha(@secondary, 0.38);
+}
+
+/* Charging & Warning states */
+#battery.charging,
+#battery.plugged {
+    background-color: alpha(@primary, 0.24);
+    color: @primary;
+    border: 1px solid alpha(@primary, 0.48);
+}
+
+#battery.critical:not(.charging),
+#temperature.critical {
+    background-color: @error_container;
+    color: @on_error_container;
+    border: 1px solid @error;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    background-color: @surface_container_lowest;
+    color: @outline;
+    border: 1px solid @outline_variant;
 }
-
-#temperature {
-}
-
-#temperature.critical {
-    background-color: #eb4d4b;
-}
-

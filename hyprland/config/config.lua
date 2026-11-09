@@ -1,7 +1,7 @@
 hl.config({
     general = {
-        gaps_in  = 4,
-        gaps_out = 6,
+        gaps_in  = 15,
+        gaps_out = 50,
         border_size = 1,
 
         col = {
@@ -28,7 +28,7 @@ hl.config({
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 0.95,
-        inactive_opacity = 0.4,
+        inactive_opacity = 0.7,
 
         shadow = {
             enabled      = true,
@@ -50,8 +50,6 @@ hl.config({
     },
 
     misc = {
-    	force_default_wallpaper = 2,
-	disable_hyprland_logo 	= false,
     },
 
     layers = {
