@@ -50,6 +50,6 @@ mkdir -p "$HOME/.config/waybar"
 cp -r "$repo_dir/waybar/." "$HOME/.config/waybar/"
 echo "Copied waybar/ to ~/.config/waybar/"
 
-# 10. Copy status script
-cp "$repo_dir/status.sh" "$HOME/status.sh"
-echo "Copied status.sh to ~/status.sh"
+# 10. Matugen
+mkdir -p "$HOME/.config/matugen"
+cp -r "$repo_dir/matugen/." "$HOME/.config/matugen/"
