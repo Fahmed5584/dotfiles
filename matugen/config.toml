@@ -15,3 +15,8 @@ post_hook = "pkill -SIGUSR2 waybar"
 input_path = '~/.config/matugen/templates/kitty-colors.conf'
 output_path = '~/.config/kitty/colors.conf'
 post_hook = "pkill -USR1 kitty || true"
+
+[templates.fuzzel]
+input_path = "~/.config/matugen/templates/fuzzel.ini"
+output_path = "~/.config/fuzzel/colors.ini"
+
